@@ -10,4 +10,6 @@ export function functionGenerator(command: () => void, commandName: string): Com
 export function functionBinder(command: () => void, commandName: string): void {
 	let disposableCommand = vscode.commands.registerCommand(`AudioInCode.${commandName}`, command);
 	programContext.subscriptions.push(disposableCommand);
+
+
 }

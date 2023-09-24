@@ -1,9 +1,14 @@
 import * as vscode from 'vscode';
-import { tellFileName } from './extensionFunctions';
+import * as Commands from './extensionFunctions';
 import { Command } from './types';
 import { functionBinder, functionGenerator } from './generators';
 
-let commands: [Command] = [functionGenerator(tellFileName, "tellFileName")];
+let commands: Command[] = 
+[
+	functionGenerator(Commands.tellFileName, "tellFileName"), 
+	functionGenerator(Commands.grabSelectedText, "grabSelectedText"),
+	functionGenerator(Commands.playSelectedAudio, "playSelectedAudio")
+];
 
 export function activate(context: vscode.ExtensionContext) {
 	// program startup

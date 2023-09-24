@@ -16,8 +16,26 @@
       {
         "command": "AudioInCode.tellFileName",
         "title": "Tell file name"
+      },
+      {
+        "command": "AudioInCode.grabSelectedText",
+        "title": "Grab selected text"
+      },
+      {
+        "command": "AudioInCode.playSelectedAudio",
+        "title": "Play selected"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "AudioInCode.grabSelectedText"
+        },
+        {
+          "command": "AudioInCode.playSelectedAudio"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
