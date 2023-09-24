@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "AudioInCode.helloWorld",
-        "title": "Hello World"
+        "command": "AudioInCode.tellFileName",
+        "title": "Tell file name"
       }
     ]
   },
