@@ -16,7 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
 	programContext = context;
 
 	// program bindings
-	commands.forEach(command => {functionBinder(() => {command.function();}, command.name);});
+	commands.forEach(command => {functionBinder(command);});
 }
 
 export function deactivate() {}

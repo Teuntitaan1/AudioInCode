@@ -9,7 +9,6 @@ export function tellFileName(): void {
 	vscode.window.showInformationMessage(fileName);
 }
 
-
 // grabs the selected text from the active text editor and displays it on screen
 export function grabSelectedText(): void {
     

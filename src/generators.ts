@@ -7,8 +7,8 @@ export function functionGenerator(command: () => void, commandName: string): Com
 	return {function : command, name : commandName};
 }
 // binds a function to the extension
-export function functionBinder(command: () => void, commandName: string): void {
-	let disposableCommand = vscode.commands.registerCommand(`AudioInCode.${commandName}`, command);
+export function functionBinder(command: Command): void {
+	let disposableCommand = vscode.commands.registerCommand(`AudioInCode.${command.name}`, command.function);
 	programContext.subscriptions.push(disposableCommand);
 
 
