@@ -13,10 +13,14 @@ let commands: Command[] =
 export function activate(context: vscode.ExtensionContext) {
 	// program startup
 	console.log('AudioInCode is now active!');
+	vscode.commands.executeCommand("AudioInCode.tellFileName");
 	programContext = context;
 
 	// program bindings
 	commands.forEach(command => {functionBinder(command);});
+
+	vscode.workspace.onDidOpenTextDocument(() => {Commands.tellFileName();});
+
 }
 
 export function deactivate() {}

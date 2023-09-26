@@ -1,6 +1,6 @@
-import { Command } from "./types";
 import * as vscode from "vscode";
 import { programContext } from "./extension";
+import { Command } from "./types";
 
 // generates a function type based on a function
 export function functionGenerator(command: () => void, commandName: string): Command {
