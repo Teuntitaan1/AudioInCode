@@ -3,6 +3,8 @@ import * as Commands from './extensionFunctions';
 import { Command } from './types';
 import { functionBinder, functionGenerator } from './generators';
 
+console.log("Test");
+
 let commands: Command[] = 
 [
 	functionGenerator(Commands.tellFileName, "tellFileName"), 
